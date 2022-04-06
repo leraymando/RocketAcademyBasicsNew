@@ -5,7 +5,6 @@
 
 var guessCorrect = 2;
 var guessCorrectCons = 2;
-var roundWinNumber = randomWinNumber();
 
 var selectSecretWord = function () {
   var randomDecimal = Math.random() * 3;
@@ -31,7 +30,6 @@ var secretWordBaseMain = function (input) {
   if (userSecretWord == pcSecretWord) {
     guessCorrect = guessCorrect - 1;
   }
-
   var message1 = `You guessed ${userSecretWord}, the secret word is ${pcSecretWord}, number of guess to win is ${guessCorrect}. `;
   var message2 = " ";
   if (guessCorrect == 0) {
@@ -74,6 +72,9 @@ var randomWinNumber = function () {
   var winNumber = randomInteger + 2;
   return winNumber;
 };
+
+var roundWinNumber = randomWinNumber();
+
 // need counter for each round, which is a variable
 var secretWordXRowMain = function (input) {
   // Complete the Comfortable: Secret Word X in a Row exercise below with secretWordXRowMain as the main function.
@@ -106,23 +107,23 @@ var secretWordXRowMain = function (input) {
 };
 
 // within number ranging from 1-3
-//game: guess number from 1-6 
+// game: guess number from 1-6
 
-var withinNumber = 
+var withinNumber = 0;
 
 var randomNumber1to6 = function () {
   var randomDecimal = Math.random() * 6;
   var randomInteger = Math.floor(randomDecimal);
   var diceNumber = randomInteger + 1;
   return diceNumber;
-}
+};
 
 var randomNumber1to3 = function () {
-  var randomDecimal = Math.random() * 6;
+  var randomDecimal = Math.random() * 3;
   var randomInteger = Math.floor(randomDecimal);
   var withinNumber = randomInteger + 1;
   return withinNumber;
-}
+};
 
 var diceWithinMain = function (input) {
   // Complete the More Comfortable: Dice Within exercise below with diceWithinMain as the main function.
